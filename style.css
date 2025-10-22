@@ -1,0 +1,191 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #3b82f6;
+  --muted: #94a3b8;
+  --success: #10b981;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.03);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #071029 0%, #051025 100%);
+  color: #e6eef8;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  margin-bottom: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: inherit;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--muted);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#progress {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+#question-text {
+  font-size: 1.15rem;
+  margin: 0 0 12px 0;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+/* ==== Estilo das opções tipo prova ==== */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.option:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-2px);
+}
+
+.option .radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #94a3b8;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.option.selected .radio {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+.option .letter {
+  width: 25px;
+  text-align: center;
+  font-weight: 600;
+  color: #aeb7c4;
+}
+
+.option .option-text {
+  flex: 1;
+  color: #e2e8f0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.result-stats p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.performance {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.performance.excel {
+  color: var(--success);
+}
+.performance.bom {
+  color: #f59e0b;
+}
+.performance.frac {
+  color: var(--danger);
+}
+
+footer {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
