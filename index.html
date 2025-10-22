@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Interativo - Trabalho</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Quiz Interativo</h1>
+      <p class="subtitle">Responda ao quiz e veja seu desempenho</p>
+    </header>
+
+    <section id="start-screen" class="card">
+      <label for="username">Seu nome:</label>
+      <input id="username" type="text" placeholder="Digite seu nome" />
+      <button id="start-btn" class="btn">Começar Quiz</button>
+    </section>
+
+    
+    <section id="quiz-screen" class="card hidden">
+      <div id="progress">Questão <span id="current-index">1</span> de <span id="total-questions">15</span></div>
+
+      <div id="question-box">
+        <h2 id="question-text"></h2>
+        <ul id="options" class="options-list"></ul>
+      </div>
+
+      <div class="controls">
+        <button id="prev-btn" class="btn secondary" disabled>Anterior</button>
+        <button id="next-btn" class="btn" disabled>Próxima</button>
+      </div>
+    </section>
+
+
+    <section id="result-screen" class="card hidden">
+      <h2>Resultado de <span id="result-name"></span></h2>
+      <div class="result-stats">
+        <p>Acertos: <strong id="correct-count">0</strong></p>
+        <p>Erros: <strong id="wrong-count">0</strong></p>
+        <p>Percentual: <strong id="percent">0%</strong></p>
+        <p id="performance-message" class="performance"></p>
+      </div>
+
+      <div class="chart-wrapper">
+        <canvas id="result-chart" width="400" height="300"></canvas>
+      </div>
+
+      <div class="result-actions">
+        <button id="restart-btn" class="btn secondary">Refazer</button>
+        <button id="download-btn" class="btn">Baixar Resultado (.txt)</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Trabalho Avaliativo — Desenvolvimento Web</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
